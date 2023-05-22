@@ -30,6 +30,9 @@ gem 'jbuilder'
 # Use dotenv to load environment variables from .env into ENV in development
 gem 'dotenv-rails', groups: %i[development test]
 
+# Use rspec for testing
+gem 'rspec-rails', groups: %i[development test]
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
