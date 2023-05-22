@@ -27,6 +27,21 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+# Use dotenv to load environment variables from .env into ENV in development
+gem 'dotenv-rails', groups: %i[development test]
+
+# Use rspec for testing
+gem 'rspec-rails', groups: %i[development test]
+
+# rails-controller-testing provides integration testing between Rails controllers and RSpec
+gem 'rails-controller-testing'
+
+# Use Capybara for system testing
+gem 'capybara', groups: %i[development test]
+
+# webdrivers makes it easy to download and run Selenium & ChromeDriver
+gem 'webdrivers', groups: %i[development test]
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -66,9 +81,7 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'webdrivers'
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
