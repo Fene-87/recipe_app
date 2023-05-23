@@ -3,7 +3,15 @@
 
 <div class='recipe_pre_pub'>
 <h2>Preparation_time: <%=@recipe.preparation_time%></h2>
-<h2><%=@recipe.public %></h2>
+<%= form_with(model: @recipe, local: true) do |form| %>
+  <div class="form-group">
+    <%= form.label :public %>
+    <div class="toggle-switch">
+      <%= form.check_box :public, class: "toggle-checkbox", id: "public-toggle" %>
+      <label for="public-toggle" class="toggle-label"></label>
+    </div>
+  </div>
+<% end %>
 </div>
 
 <h2>Cooking_time: <%= @recipe.cooking_time%></h2>
