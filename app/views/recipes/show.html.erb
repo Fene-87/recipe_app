@@ -1,0 +1,15 @@
+<div class='recipe_info'>
+<h1><%=@recipe.name%></h1>
+
+<div class='recipe_pre_pub'>
+<h2>Preparation_time: <%=@recipe.preparation_time%></h2>
+<h2><%=@recipe.public %></h2>
+</div>
+
+<h2>Cooking_time: <%= @recipe.cooking_time%></h2>
+
+<h2> Steps go here...</h2>
+
+<h2><%=link_to 'Back', recipes_path%></h2>
+
+</div>
