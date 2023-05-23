@@ -1,12 +1,11 @@
 class RecipesController < ApplicationController
     def index
-        # @recipes = Recipe.all
-        recipes = 'List of recipes'
+        @recipes = Recipe.all
+        # recipes = 'List of recipes'
     end
 
     def show
-        # @recipe = Recipe.find(params[:id])
-        recipe = 'Recipe details'
+        @recipe = Recipe.find(params[:id])
     end
 
     def destroy
