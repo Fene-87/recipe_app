@@ -9,7 +9,6 @@
 .recipe {
   position: relative;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   gap: 1.6rem;
   width: 80%;
@@ -38,7 +37,7 @@
   padding: 20px;
 }
 
-.recipe_name {
+.recipe_name_list {
   display: flex;
   justify-content: center;
 }
