@@ -31,17 +31,31 @@
 
 /* food-list page styling */
 .food_btn {
-  margin-top: 10rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+.food_link {
+  text-decoration: none;
 }
 .food_list {
   margin-top: 15px;
   list-style: none;
+  border: 1px solid black;
+  padding-left: 5px;
 }
 
 .food_item {
   display: flex;
   gap: 10px;
   font-size: 18px;
+}
+
+.food_item > p {
+  width: 10rem;
+  border-right: 1px solid black;
+  padding: 10px 0;
 }
 /* food-list page styling */
 
@@ -74,4 +88,15 @@
 /* signup/signin form styling */
 
 /* home page styling */
+.home_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.home_text {
+  font-size: 32px;
+}
 /* home page styling */

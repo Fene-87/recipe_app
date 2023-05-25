@@ -1,13 +1,24 @@
 <section class="main_section">
-  <div class="food_btn">
-    <button><%= link_to 'Add Food', new_food_path %></button>
+  <div>
+    <button class="food_btn"><%= link_to 'Add Food', new_food_path, class: "food_link" %></button>
   </div>
   <ul class="food_list">
+    <li class="food_item">
+      <p>Name</p>
+      <p>Measurement Unit</p>
+      <p>Unit Price</p>
+      <p>Actions</p>
+    </li>
     <% @foods.each_with_index do |food, index| %>
         <li class="food_item">
           <p><%= food.name %></p>
           <p><%= food.measurement_unit %></p>
           <p><%= food.price %></p>
+          <%= link_to food_path(food.id), data: {
+            turbo_method: :delete
+          } do %>
+            <button><%= t('.delete') %></button>
+          <% end %>
         </li>
     <% end %>
   </ul>

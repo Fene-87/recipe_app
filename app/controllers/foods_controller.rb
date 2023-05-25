@@ -21,7 +21,11 @@ class FoodsController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    @food = Food.find(params[:id])
+    @food.destroy!
+    flash[:notice] = 'Food has been successfully deleted!'
+  end
 
   private
 
