@@ -29,7 +29,7 @@
     <tr>
       <th>Food</th>
       <th>Quantity</th>
-      <th>Unit</th>
+      <th>Value</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -38,7 +38,7 @@
       <tr>
         <td><%= ingredient.food.name %></td>
         <td><%= ingredient.quantity %></td>
-        <td><%= ingredient.food.measurement_unit %></td>
+        <td><%= ingredient.food.price %></td>
         <td><%= link_to 'Modify ', edit_recipe_recipe_food_path(@recipe, ingredient), class:'td-btn' %> <%= link_to '   Remove', recipe_recipe_food_path(@recipe, ingredient), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:'td-btn' %></td>
       </tr>
     <% end %>
