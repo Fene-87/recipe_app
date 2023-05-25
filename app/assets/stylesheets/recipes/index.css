@@ -43,6 +43,10 @@
   justify-content: center;
 }
 
+.recipe-desc {
+  font-size: 18px;
+}
+
 .recipe_pre_pub {
   display: flex;
   gap: 10rem;
