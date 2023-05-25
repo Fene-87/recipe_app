@@ -116,3 +116,24 @@ hr {
   width: 95%;
   border: 1px solid black;
 }
+
+/* Tabel in recipe */
+
+table,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+}
+
+.td-btn {
+  text-decoration: none;
+}
+
+tr:nth-child(even) {
+  background-color: #dddbdb;
+}
