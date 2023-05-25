@@ -7,6 +7,10 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
   end
 
+  def public_recipe
+    @recipes = Recipe.where(public: true)
+  end
+
   def new
     @recipe = current_user.recipes.build
     @foods = Food.all
