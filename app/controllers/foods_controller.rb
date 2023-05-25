@@ -14,7 +14,7 @@ class FoodsController < ApplicationController
 
     if @food.save
       flash[:success] = 'Food created successfully.'
-      redirect_to "/foods"
+      redirect_to '/foods'
     else
       flash[:danger] = 'Food could not be created.'
       render :new
