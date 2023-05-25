@@ -14,7 +14,7 @@ class FoodsController < ApplicationController
 
     if @food.save
       flash[:success] = 'Food created successfully.'
-      redirect_to "/users/#{current_user.id}/foods"
+      redirect_to "/foods"
     else
       flash[:danger] = 'Food could not be created.'
       render :new
@@ -26,6 +26,6 @@ class FoodsController < ApplicationController
   private
 
   def food_params
-    params.require(:food).permit(:name, :price, :quantity)
+    params.require(:food).permit(:name, :price, :quantity, :measurement_unit)
   end
 end

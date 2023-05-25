@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+.main_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navbar styling */
 .navbar {
   display: flex;
   align-items: center;
@@ -15,3 +23,20 @@
   list-style: none;
   gap: 10px;
 }
+/* navbar styling */
+
+/* food-list page styling */
+.food_btn {
+  margin-top: 10rem;
+}
+.food_list {
+  margin-top: 15px;
+  list-style: none;
+}
+
+.food_item {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+}
+/* food-list page styling */

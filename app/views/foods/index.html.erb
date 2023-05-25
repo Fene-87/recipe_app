@@ -1,1 +1,15 @@
-<h1>Foods</h1>
+<section class="main_section">
+  <div class="food_btn">
+    <button><%= link_to 'Add Food', new_food_path %></button>
+  </div>
+  <ul class="food_list">
+    <% @foods.each_with_index do |food, index| %>
+        <li class="food_item">
+          <p><%= food.name %></p>
+          <p><%= food.measurement_unit %></p>
+          <p><%= food.price %></p>
+        </li>
+    <% end %>
+  </ul>
+</section>
+
