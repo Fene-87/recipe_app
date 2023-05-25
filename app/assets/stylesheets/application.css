@@ -18,12 +18,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 3rem;
+  background-color: #d3d3d3;
 }
 
 .nav_links {
+  margin-left: 10rem;
   display: flex;
   list-style: none;
-  gap: 10px;
+  gap: 30px;
 }
 /* navbar styling */
 
@@ -70,3 +72,6 @@
   width: 8rem;
 }
 /* signup/signin form styling */
+
+/* home page styling */
+/* home page styling */
