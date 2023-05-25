@@ -3,7 +3,7 @@
   <ul class="nav_links">
     <li><%= link_to 'Food', foods_path %></li>
     <li><%= link_to 'Recipes', recipes_path %></li>
-    <li>Public recipes</li>
+    <li><%= link_to 'Public Recipes', public_recipes_path %></li>
   </ul>
   <div>
     <% if user_signed_in? %>
