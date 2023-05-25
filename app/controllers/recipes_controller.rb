@@ -17,7 +17,8 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = current_user.recipes.build(params.require(:recipe).permit(:name, :description, :public, :preparation_time, :cooking_time))
+    @recipe = current_user.recipes.build(params.require(:recipe).permit(:name, :description, :public,
+                                                                        :preparation_time, :cooking_time))
     if @recipe.save
       redirect_to recipe_path(@recipe.id)
     else
