@@ -20,7 +20,7 @@
 
 <div class='recipe_gen_add_ing'>
 <button><%=link_to 'Generate Shopping List', recipe_path, class:'btn_recipe' %></button>
-<button><%=link_to 'Add Ingredients', recipe_recipe_foods_path(@recipe), class:'btn_recipe' %></button>
+<button><%=link_to 'Add Ingredients', new_recipe_recipe_food_path(@recipe), class:'btn_recipe' %></button>
 </div>
 <hr>
 
@@ -39,7 +39,7 @@
         <td><%= ingredient.food.name %></td>
         <td><%= ingredient.quantity %></td>
         <td><%= ingredient.food.measurement_unit %></td>
-        <td><%= link_to 'Modify', edit_recipe_recipe_food_path(@recipe, ingredient) %><span> <%= link_to 'Remove', recipe_recipe_food_path(@recipe, ingredient), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Modify', edit_recipe_recipe_food_path(@recipe, ingredient) %><span> <%= link_to 'Remove', recipe_recipe_food_path(@recipe, ingredient), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>
