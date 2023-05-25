@@ -8,6 +8,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #d3d3d3;
+  min-height: 100vh;
 }
 
 /* navbar styling */
@@ -40,3 +42,31 @@
   font-size: 18px;
 }
 /* food-list page styling */
+
+/* signup/signin form styling */
+.form_header {
+  font-size: 32px;
+}
+
+.field {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.input {
+  width: 20rem;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.signup {
+  padding: 10px;
+  width: 8rem;
+}
+/* signup/signin form styling */
