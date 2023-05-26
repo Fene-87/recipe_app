@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'ShoppingLists', type: :request do
   before(:each) do
-    @user = User.create(name: 'User Name', email: 'manermidem@gmail.com')
-    @recipe = Recipe.create(id: 2, name: 'Recipe Name', description: 'Recipe Description', public: true,
-                            preparation_time: 10, cooking_time: 10, user_id: @user.id)
+    @user = User.create(name: 'User Name', email: 'jermy123456@gmail.com', password: '123456')
+    @recipe = Recipe.create(name: 'Recipe Name', description: 'Recipe Description', public: true,
+                            preparation_time: '10', cooking_time: '10', user_id: @user.id)
     @food = Food.create(name: 'Food Name', user_id: @user.id, measurement_unit: 'KG', price: 10, quantity: 10)
 
     @shopping_list = create_shopping_list(@recipe)
