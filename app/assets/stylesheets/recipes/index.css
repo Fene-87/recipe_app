@@ -165,3 +165,21 @@ td {
 tr:nth-child(even) {
   background-color: #dddbdb;
 }
+
+/* Shopping lists */
+
+.shopping-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  padding-top: 4rem;
+}
+
+.shopping_lists {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 1.6rem;
+  padding-top: 1rem;
+}
