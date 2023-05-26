@@ -1,4 +1,5 @@
-<section class="main_section">
+<%= render 'shared/navbar' %>
+<section class="main_section food_page">
   <div>
     <button class="food_btn"><%= link_to 'Add Food', new_food_path, class: "food_link" %></button>
   </div>
@@ -14,11 +15,9 @@
           <p><%= food.name %></p>
           <p><%= food.measurement_unit %></p>
           <p><%= food.price %></p>
-          <%= link_to food_path(food.id), data: {
+          <%= link_to "Delete", food_path(food.id), data: {
             turbo_method: :delete
-          } do %>
-            <button><%= t('.delete') %></button>
-          <% end %>
+          } %>
         </li>
     <% end %>
   </ul>

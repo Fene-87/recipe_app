@@ -30,17 +30,11 @@ gem 'jbuilder'
 # Use dotenv to load environment variables from .env into ENV in development
 gem 'dotenv-rails', groups: %i[development test]
 
-# Use rspec for testing
-gem 'rspec-rails', groups: %i[development test]
-
 # rails-controller-testing provides integration testing between Rails controllers and RSpec
 gem 'rails-controller-testing'
 
 # Use Capybara for system testing
 gem 'capybara', groups: %i[development test]
-
-# webdrivers makes it easy to download and run Selenium & ChromeDriver
-gem 'webdrivers', groups: %i[development test]
 
 # authorization library for Rails
 gem 'cancancan'
@@ -69,6 +63,8 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails'
+  gem 'webdrivers'
 end
 
 group :development do
