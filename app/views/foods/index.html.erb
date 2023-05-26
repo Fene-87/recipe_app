@@ -14,11 +14,9 @@
           <p><%= food.name %></p>
           <p><%= food.measurement_unit %></p>
           <p><%= food.price %></p>
-          <%= link_to food_path(food.id), data: {
+          <%= link_to "Delete", food_path(food.id), data: {
             turbo_method: :delete
-          } do %>
-            <button><%= t('.delete') %></button>
-          <% end %>
+          } %>
         </li>
     <% end %>
   </ul>
