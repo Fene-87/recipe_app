@@ -135,7 +135,7 @@ hr {
 }
 
 /* form recipe */
-
+.field,
 .actions {
   display: flex;
   flex-direction: column;
