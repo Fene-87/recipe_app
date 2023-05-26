@@ -42,6 +42,9 @@ gem 'capybara', groups: %i[development test]
 # webdrivers makes it easy to download and run Selenium & ChromeDriver
 gem 'webdrivers', groups: %i[development test]
 
+# authorization library for Rails
+gem 'cancancan'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
