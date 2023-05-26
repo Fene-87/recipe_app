@@ -4,8 +4,8 @@ RSpec.describe Recipe, type: :model do
   subject(:user) { User.new(name: 'User Name', email: 'manermidem@gmail.com') }
 
   let!(:recipe) do
-    Recipe.create(name: 'Recipe Name', description: 'Recipe Description', public: true, preparation_time: 10,
-                  cooking_time: 10, user_id: user.id)
+    Recipe.create(name: 'Recipe Name', description: 'Recipe Description', public: true,
+                  preparation_time: 10, cooking_time: 10, user_id: user.id)
   end
 
   before { recipe.save }
