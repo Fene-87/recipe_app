@@ -1,12 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'Recipes', type: :request do
-
   include Devise::Test::IntegrationHelpers
 
   before(:each) do
-
-    @user = User.create(name: 'User Name', role:'user', email: 'maanermidem@gmail.com', password: 12345678)
+    @user = User.create(name: 'User Name', role: 'user', email: 'maanermidem@gmail.com', password: 12_345_678)
     sign_in @user
     @recipe = Recipe.create(name: 'Recipe Name', description: 'Recipe Description', public: true,
                             preparation_time: '10', cooking_time: '10', user_id: @user.id)

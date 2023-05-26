@@ -44,5 +44,4 @@ class RecipesController < ApplicationController
     params.require(:recipe).permit(:name, :description, :preparation_time, :cooking_time, :public,
                                    recipe_foods_attributes: %i[id food_id quantity _destroy])
   end
-
 end
