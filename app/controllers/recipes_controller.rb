@@ -9,9 +9,9 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-    if @recipe.public && @recipe.user != current_user
-      redirect_to recipes_path, alert: "You are not authorized to view this recipe."
-    end
+    return unless @recipe.public && @recipe.user != current_user
+
+    redirect_to recipes_path, alert: 'You are not authorized to view this recipe.'
   end
 
   def public_recipe

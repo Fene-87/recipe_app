@@ -67,7 +67,5 @@ RSpec.describe RecipeFood, type: :model do
     it 'should have a recipe_id' do
       expect(recipe_food.recipe_id).to eq(recipe.id)
     end
-
   end
-
 end
