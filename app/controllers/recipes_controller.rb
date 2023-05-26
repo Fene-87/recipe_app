@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :authenticate_user!, except: %i[public_recipe index show]
+  before_action :authenticate_user!, except: %i[public_recipe index]
   load_and_authorize_resource
 
   def index
@@ -9,6 +9,9 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    if @recipe.public && @recipe.user != current_user
+      redirect_to recipes_path, alert: "You are not authorized to view this recipe."
+    end
   end
 
   def public_recipe
