@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
   def index
-    @user = User.find(params[:user_id])
+    @user = User.find(current_user.id)
     @foods = @user.foods
   end
 
@@ -14,18 +14,22 @@ class FoodsController < ApplicationController
 
     if @food.save
       flash[:success] = 'Food created successfully.'
-      redirect_to "/users/#{current_user.id}/foods"
+      redirect_to '/foods'
     else
       flash[:danger] = 'Food could not be created.'
       render :new
     end
   end
 
-  def destroy; end
+  def destroy
+    @food = Food.find(params[:id])
+    @food.destroy!
+    flash[:notice] = 'Food has been successfully deleted!'
+  end
 
   private
 
   def food_params
-    params.require(:food).permit(:name, :price, :quantity)
+    params.require(:food).permit(:name, :price, :quantity, :measurement_unit)
   end
 end
