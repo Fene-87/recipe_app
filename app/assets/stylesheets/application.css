@@ -12,6 +12,10 @@
   min-height: 100vh;
 }
 
+.food_page {
+  min-height: 93vh;
+}
+
 .btn {
   padding: 10px;
   width: 8rem;
