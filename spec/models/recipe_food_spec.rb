@@ -6,11 +6,12 @@ RSpec.describe RecipeFood, type: :model do
   subject(:user) { User.new(name: 'User Name', email: 'manermidem@gmail.com') }
 
   let!(:recipe) do
-    Recipe.create(name: 'Recipe Name', description: 'Recipe Description', public: true, preparation_time: 10, cooking_time: 10, user_id: user.id)
+    Recipe.create(name: 'Recipe Name', description: 'Recipe Description', public: true, preparation_time: 10,
+                  cooking_time: 10, user_id: user.id)
   end
 
   let!(:food) do
-    Food.create(name: 'Food Name', user_id: user.id, measurement_unit: 'KG', price: 10, quantity: 10) 
+    Food.create(name: 'Food Name', user_id: user.id, measurement_unit: 'KG', price: 10, quantity: 10)
   end
 
   let!(:recipe_food) do
@@ -45,6 +46,4 @@ RSpec.describe RecipeFood, type: :model do
       expect(recipe_food).to_not be_valid
     end
   end
-
-
 end
