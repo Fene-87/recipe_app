@@ -84,6 +84,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: <%= ENV["RECIPE_APP_DATABASE_NAME"] %>
   username: <%= ENV["RECIPE_APP_DATABASE_USERNAME"] %>
   password: <%= ENV["RECIPE_APP_DATABASE_PASSWORD"] %>
