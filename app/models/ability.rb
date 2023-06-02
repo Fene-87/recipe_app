@@ -5,6 +5,9 @@ class Ability
     # Define abilities for the user here. For example:
     #
     user ||= User.new # guest user (not logged in)
+
+    can :manage, Recipe, user_id: user.id
+
     if user.admin?
       can :manage, :all
     else

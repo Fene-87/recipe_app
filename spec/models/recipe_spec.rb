@@ -5,7 +5,7 @@ RSpec.describe Recipe, type: :model do
 
   let!(:recipe) do
     Recipe.create(name: 'Recipe Name', description: 'Recipe Description', public: true,
-                  preparation_time: 10, cooking_time: 10, user_id: user.id)
+                  preparation_time: '10', cooking_time: '10', user_id: user.id)
   end
 
   before { recipe.save }
@@ -49,6 +49,28 @@ RSpec.describe Recipe, type: :model do
     it 'is not valid with a cooking_time less than 0' do
       recipe.cooking_time = -1
       expect(recipe).to_not be_valid
+    end
+  end
+
+  describe 'View' do
+    it 'should have a name' do
+      expect(recipe.name).to eq('Recipe Name')
+    end
+
+    it 'should have a description' do
+      expect(recipe.description).to eq('Recipe Description')
+    end
+
+    it 'should have a public' do
+      expect(recipe.public).to eq(true)
+    end
+
+    it 'should have a preparation_time' do
+      expect(recipe.preparation_time).to eq('10')
+    end
+
+    it 'should have a cooking_time' do
+      expect(recipe.cooking_time).to eq('10')
     end
   end
 end

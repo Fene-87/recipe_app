@@ -1,6 +1,12 @@
+<div class='shopping-container'>
+
 <h1>Shopping List</h1>
 
-<h2>Shopping lists</h2>
+<div class='shopping_lists'>
+<h2>Amount of food items to buy: <%= @recipe.recipe_foods.count %> </h2>
+<h2>Total value of food needed: $<%= @recipe.recipe_foods.sum { |recipe_food| recipe_food.food.price } %> </h2>
+</div>
+
 <table>
   <thead>
     <tr>
@@ -22,3 +28,5 @@
 </table>
 
 <h2><%=link_to 'Back', recipe_path(@recipe.id)%></h2>
+
+</div>
